@@ -1,0 +1,171 @@
+.sk {
+    position: absolute;
+    top: 40px;
+   left: 186px;
+   padding-left: 14px;
+    border-left: 1px solid  #c81623;
+}
+.nav {
+    overflow: hidden;
+}
+.sk_list {
+    float: left;
+}
+.sk_list ul li {
+    float: left;
+}
+.sk_list ul li a{
+    display: block;
+    
+    font-size: 16px;
+color: #000;
+line-height: 47px;
+font-weight: 700;
+padding:0 30px;
+
+}
+.sk_con {
+    float: left;
+}
+.sk_con ul li {
+    float: left;
+    font-size: 14px;
+    color: #666666;
+    line-height: 47px;
+    padding: 0 20px;
+}
+.sk_con ul li:last-child a::after {
+    font-family: "icomoon";
+    content: '\e91e';
+}
+.sk_bd {
+    margin-top: 25px;
+}
+.sk_bd ul li img {
+    width: 290px;
+   
+    padding-left: 0;
+}
+
+.boxss {
+    position: relative;
+    width: 290px;height: 300px;
+}
+
+.mask {
+    display: none;
+width: 100px;
+height: 100px;
+background-color: #fede4f;
+opacity: .5;
+position: absolute;
+top: 0;
+left: 0;
+cursor: move;
+border: 1px solid #ccc;
+
+}
+.big {
+     display: none;
+    position: absolute;
+    left: 300px;
+    top: 0;
+width: 500px;
+height:500px;
+background-color: pink;
+z-index: 1;
+border: 1px solid #ccc;
+overflow: hidden;
+border-collapse: collapse;
+
+
+
+}
+.imge{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.sk_bd ul li  {
+float: left;
+
+    width: 290px;
+    height: 470px;
+    margin-right: 10px;
+    border: 1px solid transparent;
+    
+   
+}
+
+.sk_bd ul li  a {display: block;
+    font-size: 14px ;
+    color: #666;
+    padding-left: 10px;
+   
+}
+.sk_bd ul li h3 {
+    margin-top: 10px;
+    font-size: 22px;
+    color: #e60012;
+    padding-left: 12px;
+}
+.sk_bd ul li h3::after {
+
+    font-size: 14px;
+    color: #a4a4a4;
+    content: '6088';
+text-decoration: line-through;
+padding-left: 7px;
+}
+ .one,.two,.three{
+    display: inline-block;
+
+}
+.one {
+    font-size: 14px;
+    color: #666666;
+    padding-left: 12px;
+
+}
+.two {
+    width: 132px;
+    height: 16px;   
+    border: 1px solid red;
+    border-radius: 8px;
+   
+}
+.two:hover span {
+    width: 100%;
+    border-radius: 8px;
+}
+.two span {
+   float: left;
+   display: block;
+    width: 100px;
+    height:100%;
+    background-color:  #ed282e;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    transition: all .7s;
+    
+    
+}
+.three {
+
+    font-size: 14px;
+    color: #666666;
+}
+.three i {
+    font-size: 16px;
+    color: red;
+}
+.lastbox {
+    
+    width: 290px;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 50px;
+    color: #fff;
+    background-color: #b1191a;
+}
