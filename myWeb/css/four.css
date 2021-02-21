@@ -1,0 +1,57 @@
+body {
+    background-color: #eee;
+
+}
+
+h2 {
+    text-align: center;
+    font-size: 42px;
+    height: 80px;
+    line-height: 80px;
+}
+
+.center {
+    width: 1400px;
+    margin: 20px auto;
+
+    background-color: #fff;
+    border-radius: 40px;
+    overflow: hidden;
+
+
+}
+
+.center p {
+    font-size: 18px;
+    text-indent: 2em;
+    line-height: 3;
+}
+
+.box {
+    padding: 20px;
+}
+
+.spn {
+    color: red;
+    font-weight: 700;
+}
+
+.pic {
+    float: left;
+    width: 280px;
+    height: 420px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: red;
+    margin: 0 35px;
+}
+
+.pic img {
+    height: 100%;
+    width: 100%;
+}
+
+.pics {
+    height: 450px;
+}

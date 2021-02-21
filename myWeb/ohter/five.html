@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/five.css">
+    <link rel="stylesheet" href="../map/leaflet.css">
+    <script src="../map/leaflet.js"></script>
+
+</head>
+
+<body>
+
+    <div class="top">
+        <span>
+            <img src="../img/logo3.jpg" alt="">
+        </span>
+
+        <span class="pss">Home and lodging</span>
+
+        <a href="./five.html " class="now"> Contact us</a>
+        <a href=" ./four.html">Corporate culture</a>
+
+        <a href="./three.html">Product introduction</a>
+        <a href="./two.html">Product display</a>
+        <a href="./one.html">Sales promotion</a>
+        <a href="../index.html">Home</a>
+    </div>
+
+
+
+
+
+    <h2>Contact us</h2>
+
+    <div class="center">
+        <div class="c-t">
+
+            <div class="tes">Office environment</div>
+        </div>
+
+        <div class="c-f">
+
+            <span><img src="../img/f.jpg" alt=""></span>
+            <span><img src="../img/f1.jpg" alt=""></span>
+            <span><img src="../img/f2.jpg" alt=""></span>
+            <span><img src="../img/f3.jpg" alt=""></span>
+            <span><img src="../img/f4.jpg" alt=""></span>
+            <span><img src="../img/f6.jpg" alt=""></span>
+        </div>
+
+        <div class="c-t">
+
+            <div class="tes">contact information</div>
+        </div>
+        <div class="c-wen">
+            <span>
+                <img src="../img/logo3.jpg" alt="">
+            </span>
+
+            <ul>
+                <li><img src="../img/gongsi.png" alt=""> Company: Tuyu</li>
+                <li><img src="../img/phone.png" alt=""> Tel: 052-555-67455</li>
+                <li><img src="../img/you.png" alt=""> Email: 17852407091@123.com </li>
+                <li><img src="../img/wei.png" alt=""> Address: Guangzhou hi tech Development Zone</li>
+            </ul>
+
+
+        </div>
+
+
+        <div id="mapid"></div>
+
+
+        <div id="xinxi">
+            <h1>Fill in your information</h1>
+
+            <div class="xinxi-o">
+                <span>Name</span>
+                <input type="text" class="put">
+            </div>
+            <div class="xinxi-o">
+                <span>Sex</span>
+                <input type="text" class="put">
+            </div>
+            <div class="xinxi-o">
+                <span>Age</span>
+                <input type="text" class="put">
+            </div>
+            <div class="xinxi-o">
+                <span>Position</span>
+                <input type="text" class="put">
+            </div>
+            <div class="xinxi-o">
+                <span>Email</span>
+                <input type="text" class="put">
+            </div>
+
+
+
+            <a href="./collected_data.html" class="bon">Examine </a>
+            <button type="button" class="serch">Submit</button>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <div class="footer">
+        <div class="w">
+
+            <div class="lian">
+                <div class="liantop">
+                    Links
+
+                </div>
+
+                <div class="lianfooter">
+
+
+                    <a href="https://www.ctrip.com/">Ctrip</a>
+                    <a href="https://www.qunar.com/">Where to travel</a>
+                    <a href="http://www.cntour365.com/">Qingcheng travel</a>
+
+                    <a href="https://www.tuniu.com/">Tuniu travel website</a>
+                    <a href="https://www.joytrav.com/">Yuehe Tourism</a>
+                    <a href="https://cn.toursforfun.com/">Tufeng Travel Network</a>
+                    <a href="http://www.mayi.com/">Ant short rent</a>
+                    <a href="http://www.mayi.com/">Security office </a>
+                    <a href="http://www.zglxw.com/">Chinese Travel Service</a>
+                    <a href="https://bj.leju.com/">Happy house</a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <span class="lo"><img src="../img/logo3.jpg" alt=""></span>
+
+    </div>
+    <script>
+        var mymap = L.map('mapid').setView([23.125152, -246.730911], 10);
+
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw',
+            {
+                maxZoom: 18,
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+                    '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                    'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                id: 'mapbox/streets-v11',
+                tileSize: 512,
+                zoomOffset: -1
+            }).addTo(mymap);
+
+        var marker = L.marker([23.125152, -246.730911]).addTo(mymap);
+        var circle = L.circle([23.125152, -246.730911], {
+            color: 'red',
+            fillColor: '#f03',
+            fillOpacity: 0.5,
+            radius: 500
+        }).addTo(mymap);
+
+
+
+        var puts = document.querySelectorAll('.put');
+        var serch = document.querySelector('.serch');
+        var time = Date.now();
+        var eve = {
+            name: puts[0].value,
+            sex: puts[1].value,
+            age: puts[2].value,
+            position: puts[3].value,
+            email: puts[4].value,
+
+        }
+
+        window.localStorage.setItem('eve', JSON.stringify(eve))
+        serch.onclick = function () {
+
+            var eve = {
+                name: puts[0].value,
+                sex: puts[1].value,
+                age: puts[2].value,
+                position: puts[3].value,
+                email: puts[4].value,
+                time: time
+            }
+
+
+            localStorage.setItem('eve', JSON.stringify(eve));
+
+
+            alert('Submitted successfully' + '\n' + new Date());
+
+
+            for (var i = 0; i < puts.length; i++) {
+                puts[i].value = ''
+            }
+        }
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

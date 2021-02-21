@@ -1,0 +1,83 @@
+body {
+
+    background-color: #fafafa;
+}
+
+
+.one,
+.two,
+.three {
+    height: 700px;
+    position: relative;
+}
+
+.one {
+    background: url(../img/over.jpg) no-repeat;
+    background-size: 100% 700px;
+}
+
+.two {
+    background: url(../img/b1.jpg) no-repeat;
+    background-size: 100% 700px;
+}
+
+.three {
+    background: url(../img/b4.jpg) no-repeat;
+    background-size: 100% 700px;
+}
+
+.tit {
+    text-indent: 2em;
+    padding: 10px;
+
+    
+    width: 400px;
+    height: 360px;
+    position: absolute;
+    right: 20px;
+
+    top: 160px;
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.tit p {
+    margin-top: 20px;
+    font-size: 20px;
+    color: red;
+}
+
+.tit span {
+    display: block;
+
+    margin-top: 30px;
+    color: #fff;
+    font-size: 18px;
+    line-height: 2;
+}
+
+.money {
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    color: #fff;
+    font-size: 28px;
+}
+
+.money span {
+    color: red;
+    font-size: 24px;
+}
+
+.money i {
+    font-size: 18px;
+    text-decoration: line-through;
+}
+
+.big {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 42px;
+    color: #fff;
+}

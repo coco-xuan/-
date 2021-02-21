@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>collected_data</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/five.css">
+    <style>
+        #xinxi {
+            margin: 100px auto;
+        }
+
+        body {
+            background-color: #fff;
+        }
+
+        .put {
+            padding-left: 40px;
+            width: 400px;
+            float: left;
+        }
+
+        #center {
+            height: 1200px;
+            background: url(../img/loca.jpg);
+            background-size: 100% 100%;
+            padding-top: 300px;
+        }
+
+        #xinxi {
+            margin-top: 0;
+            background-color: rgba(0, 0, 0, .5);
+            color: #fff;
+        }
+
+        #xinxi button {
+            background-color: transparent;
+        }
+
+        #xinxi .bon,
+        .serch {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <span>
+            <img src="../img/logo3.jpg" alt="">
+        </span>
+
+        <span class="pss">Home and lodging</span>
+
+        <a href="./five.html " class="now"> Contact us</a>
+        <a href=" ./four.html">Corporate culture</a>
+
+        <a href="./three.html">Product introduction</a>
+        <a href="./two.html">Product display</a>
+        <a href="./one.html">Sales promotion</a>
+        <a href="../index.html">Home</a>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div id="center">
+
+        <div id="xinxi">
+            <h1>Personal information</h1>
+
+            <div class="xinxi-o">
+                <span>Name</span>
+                <div class="put"></div>
+            </div>
+            <div class="xinxi-o">
+                <span>Sex</span>
+                <div class="put"></div>
+            </div>
+            <div class="xinxi-o">
+                <span>Age</span>
+                <div class="put"></div>
+            </div>
+            <div class="xinxi-o">
+                <span>Position</span>
+                <div class="put"></div>
+            </div>
+            <div class="xinxi-o">
+                <span>Email</span>
+                <div class="put"></div>
+            </div>
+
+
+
+            <a href="./five.html" class="bon">Go Back</a>
+            <button type="button" class="serch">Clear</button>
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="footer">
+        <div class="w">
+
+            <div class="lian">
+                <div class="liantop">
+                    Links
+
+                </div>
+
+                <div class="lianfooter">
+
+
+                    <a href="https://www.ctrip.com/">Ctrip</a>
+                    <a href="https://www.qunar.com/">Where to travel</a>
+                    <a href="http://www.cntour365.com/">Qingcheng travel</a>
+
+                    <a href="https://www.tuniu.com/">Tuniu travel website</a>
+                    <a href="https://www.joytrav.com/">Yuehe Tourism</a>
+                    <a href="https://cn.toursforfun.com/">Tufeng Travel Network</a>
+                    <a href="http://www.mayi.com/">Ant short rent</a>
+                    <a href="http://www.mayi.com/">Security office </a>
+                    <a href="http://www.zglxw.com/">Chinese Travel Service</a>
+                    <a href="https://bj.leju.com/">Happy house</a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <span class="lo"><img src="../img/logo3.jpg" alt=""></span>
+
+    </div>
+
+
+    <script>
+
+        var puts = document.querySelectorAll('.put');
+        let clear = document.querySelector('.serch');
+
+        var eve = JSON.parse(window.localStorage.getItem('eve'));
+
+
+
+        clear.onclick = function () {
+            window.localStorage.clear();
+
+            for (var i = 0; i < puts.length; i++) {
+                puts[i].innerHTML = ''
+            }
+
+
+            alert('Clear successfully' + '\n' + new Date());
+        }
+        puts[0].innerHTML = eve.name;
+        puts[1].innerHTML = eve.sex;
+        puts[2].innerHTML = eve.age;
+        puts[3].innerHTML = eve.position;
+        puts[4].innerHTML = eve.email;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

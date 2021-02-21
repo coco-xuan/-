@@ -1,0 +1,57 @@
+body {
+    background-color: #eee;
+}
+
+.baneer {
+    width: 100%;
+
+}
+
+.one,
+.two,
+.three,
+.four,
+.five,
+.six {
+    height: 700px;
+    position: relative;
+}
+
+.one {
+    background: url(../img/b.jpg) no-repeat;
+    background-size: 100% 700px;
+}
+
+.two {
+    background: url(../img/c.jpg) no-repeat;
+    background-size: 100% 700px;
+}
+
+.three {
+    background: url(../img/c1.jpg) no-repeat;
+    background-size: 100% 700px;
+}
+
+.four {
+    background: url(../img/c2.jpg) no-repeat;
+    background-size: 100% 700px;
+}
+
+.five {
+    background: url(../img/c4.jpg) no-repeat;
+    background-size: 100% 700px;
+}
+
+.six {
+    background: url(../img/c5.jpg) no-repeat;
+    background-size: 100% 700px;
+}
+
+.big {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 42px;
+    color: #fff;
+}
